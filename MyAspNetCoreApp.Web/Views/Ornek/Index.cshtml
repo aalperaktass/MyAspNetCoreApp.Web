@@ -5,3 +5,19 @@
 
 <h1>Sayfayı oluşturduk.</h1>
 
+@{
+    var name = ViewBag.name;
+    <p>@name</p>
+}
+<p>@ViewBag.name</p>
+<hr/>
+<p>Yaş : @ViewData["age"]</p> 
+<hr />
+<p>İsimler:</p>
+<hr />
+@{
+    foreach (var item in ViewData["names"] as List<string>)
+    {
+        <p>@item.</p>
+    }
+}
