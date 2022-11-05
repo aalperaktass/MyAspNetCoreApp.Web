@@ -6,3 +6,31 @@
     <h1 class="display-4">Welcome</h1>
     <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
 </div>
+
+@*<partial name="_MenuPartialView"></partial>*@
+
+@section Css
+    {
+    <link href="~/css/example.css" rel="stylesheet" />
+    <style>
+        h2
+        {
+            color:red;
+            background-color:blue;
+        }
+    </style>
+
+}
+
+@section Scripts
+{
+    <script type="text/Jscript">
+        //alert("Sayfama Hoşgeldiniz")
+            $(document).ready(function()
+            {
+                console.log("Sayfama Hoşgeldiniz");
+            })
+    </script>
+}
+<h2> Hoşgeldin Alper...</h2>
+<h3>Hoşgeldin Alper...</h3>
