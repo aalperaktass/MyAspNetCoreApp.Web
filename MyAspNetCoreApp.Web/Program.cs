@@ -1,7 +1,21 @@
+using Microsoft.EntityFrameworkCore;
+using MyAspNetCoreApp.Web.Models;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+// Aþaðýda yazýlmýþ olan kodlar ile artýk sql baðlantýsý saðlanmýþ oldu.
+builder.Services.AddDbContext<AppDbContext>(options =>
+ {
+     options.UseSqlServer(builder.Configuration.GetConnectionString("SqlCon"));
+ 
+ });
+
+
+
+
 
 var app = builder.Build();
 
